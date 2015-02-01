@@ -53,6 +53,8 @@ end
 group :test do
   gem 'shoulda-matchers', '~> 2.7.0', require: false
   gem 'cucumber-rails', '~> 1.4.2', require: false
+  gem 'capybara', '~> 2.4.4'
+  gem 'selenium-webdriver', '~> 2.44.0'
   gem 'database_cleaner', '~> 1.4.0'
 end
 

@@ -49,6 +49,9 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
+  # added so we can do web-ish stuff more easily in rspec tests
+  config.include Capybara::DSL
+
   # Shortcut FactoryGirl method calls
   config.include FactoryGirl::Syntax::Methods
 end
