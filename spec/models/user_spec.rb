@@ -7,7 +7,7 @@ describe User do
     is_expected.to validate_presence_of :name
     is_expected.to validate_presence_of :email
     is_expected.to validate_presence_of :password
-    is_expected.to validate_uniqueness_of :email
+    is_expected.to validate_uniqueness_of :email if user.save
     is_expected.to allow_value('user@example.com').for :email
   end
 

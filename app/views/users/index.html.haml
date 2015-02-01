@@ -1,0 +1,18 @@
+%h1 All Users
+
+%table
+  %thead
+    %tr
+      %th ID
+      %th Name
+      %th Email
+      %th
+      %th
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.id
+        %td= link_to user.name, user
+        %td= user.email
+        %td= link_to "Edit", edit_user_path(user)
+        %td= link_to "Fire", user, method: :delete, data: { confirm: "Fire this lazy parasite?" }
